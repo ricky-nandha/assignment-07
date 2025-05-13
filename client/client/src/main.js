@@ -12,13 +12,16 @@ async function handleSubmit(event) {
 
   console.log(formValues);
 
-  const serverResponse = await fetch("http://localhost:8080/film-reviews", {
-    method: "POST",
-    body: JSON.stringify(formValues),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  const serverResponse = await fetch(
+    "https://assignment-07-server.onrender.com/film-reviews",
+    {
+      method: "POST",
+      body: JSON.stringify(formValues),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
 
   const parsedResponse = await serverResponse.json();
 
@@ -33,7 +36,9 @@ async function handleSubmit(event) {
 const filmsContainer = document.getElementById("films-container");
 
 async function getAndRenderFilms() {
-  const response = await fetch("http://localhost:8080/film-reviews");
+  const response = await fetch(
+    "https://assignment-07-server.onrender.com/film-reviews"
+  );
   const data = await response.json();
   console.log(data);
 
