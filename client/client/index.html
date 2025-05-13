@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Film Reviews Project</title>
+    <script type="module" src="/src/main.js" defer></script>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <h1>Film Reviews Project</h1>
+
+    <form id="film-form">
+      <label for="filmTitle">Enter your film title</label>
+      <input
+        type="text"
+        id="filmTitle"
+        name="filmTitle"
+        placeholder="Film title..."
+      />
+
+      <label for="filmRating">Enter your film rating</label>
+      <input
+        type="number"
+        id="filmRating"
+        name="filmRating"
+        min="0"
+        max="5"
+        placeholder="Film rating"
+      />
+
+      <label for="filmReview">Enter your film review</label>
+      <input
+        type="text"
+        id="filmReview"
+        name="filmReview"
+        placeholder="Film Review..."
+      />
+
+      <label for="filmWatching">Enter your film watching experience</label>
+      <input
+        type="text"
+        id="filmWatching"
+        name="filmWatching"
+        placeholder="Watching experience..."
+      />
+
+      <input type="submit" value="Submit Review" class="submitBtn" />
+    </form>
+
+    <section id="films-container"></section>
+  </body>
+</html>
